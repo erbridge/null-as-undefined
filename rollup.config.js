@@ -9,23 +9,17 @@ const tsconfig = require("./tsconfig.json");
 
 module.exports = {
   input: "src/index.ts",
-  output: [
-    {
-      dir: dirname(pkg.main),
-      format: "cjs"
-    },
-    {
-      dir: dirname(pkg.module),
-      format: "es"
-    }
-  ],
+  output: {
+    dir: dirname(pkg.main),
+    format: "cjs"
+  },
   external: [
     ...Object.keys(pkg.dependencies || {}),
     ...Object.keys(pkg.peerDependencies || {})
   ],
   plugins: [
     del({
-      targets: [dirname(pkg.main), dirname(pkg.module)],
+      targets: [dirname(pkg.main)],
       verbose: true
     }),
     progress({
