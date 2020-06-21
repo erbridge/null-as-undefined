@@ -4,9 +4,6 @@ updates:
     directory: "/"
     schedule:
       interval: daily
-    labels:
-      - github-actions
-      - dependencies
     reviewers:
       - erbridge
 
@@ -14,9 +11,6 @@ updates:
     directory: "/"
     schedule:
       interval: daily
-    labels:
-      - npm
-      - dependencies
     reviewers:
       - erbridge
     versioning-strategy: widen
