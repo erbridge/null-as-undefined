@@ -31,7 +31,6 @@
     "pretty-quick": "^2.0.1",
     "rollup": "^1.27.5",
     "rollup-plugin-delete": "^1.1.0",
-    "rollup-plugin-progress": "^1.1.1",
     "rollup-plugin-typescript2": "^0.25.2",
     "ts-jest": "^24.2.0",
     "typescript": "^3.7.2"

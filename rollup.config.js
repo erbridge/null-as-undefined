@@ -1,7 +1,6 @@
 /* eslint-env node */
 const { dirname } = require("path");
 const del = require("rollup-plugin-delete");
-const progress = require("rollup-plugin-progress");
 const typescript = require("rollup-plugin-typescript2");
 
 const pkg = require("./package.json");
@@ -27,9 +26,6 @@ module.exports = {
     del({
       targets: [dirname(pkg.main), dirname(pkg.module), dirname(pkg.types)],
       verbose: true
-    }),
-    progress({
-      clearLine: false
     }),
     typescript({
       typescript: require("typescript"),
