@@ -11,31 +11,31 @@ module.exports = {
   output: [
     {
       dir: dirname(pkg.main),
-      format: "cjs"
+      format: "cjs",
     },
     {
       dir: dirname(pkg.module),
-      format: "es"
-    }
+      format: "es",
+    },
   ],
   external: [
     ...Object.keys(pkg.dependencies || {}),
-    ...Object.keys(pkg.peerDependencies || {})
+    ...Object.keys(pkg.peerDependencies || {}),
   ],
   plugins: [
     del({
       targets: [dirname(pkg.main), dirname(pkg.module), dirname(pkg.types)],
-      verbose: true
+      verbose: true,
     }),
     typescript({
       typescript: require("typescript"),
       useTsconfigDeclarationDir: true,
       tsconfigOverride: {
         compilerOptions: {
-          declarationDir: dirname(pkg.types)
+          declarationDir: dirname(pkg.types),
         },
-        exclude: [...tsconfig.exclude, "**/*.test.*"]
-      }
-    })
-  ]
+        exclude: [...tsconfig.exclude, "**/*.test.*"],
+      },
+    }),
+  ],
 };

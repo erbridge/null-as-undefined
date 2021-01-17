@@ -16,8 +16,8 @@ module.exports = {
         "plugin:@typescript-eslint/eslint-recommended",
         "plugin:@typescript-eslint/recommended",
         ...sharedPrettierExtends,
-        "prettier/@typescript-eslint"
-      ]
-    }
-  ]
+        "prettier/@typescript-eslint",
+      ],
+    },
+  ],
 };
