@@ -1,6 +1,6 @@
 {
   "name": "null-as-undefined",
-  "version": "0.2.1",
+  "version": "0.3.0",
   "description": "Convert `null` values to `undefined` in a way that TypeScript understands",
   "license": "MIT",
   "main": "dist/cjs/index.js",
