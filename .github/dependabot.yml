@@ -13,4 +13,4 @@ updates:
       interval: daily
     reviewers:
       - erbridge
-    versioning-strategy: widen
+    versioning-strategy: increase
