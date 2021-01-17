@@ -26,13 +26,13 @@ describe("nullValuesAsUndefined()", () => {
     const result = nullValuesAsUndefined({
       a: undefined,
       b: null,
-      c: "test"
+      c: "test",
     });
 
     expect(result).toEqual({
       a: undefined,
       b: undefined,
-      c: "test"
+      c: "test",
     });
   });
 });

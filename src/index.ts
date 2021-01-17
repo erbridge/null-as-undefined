@@ -11,7 +11,7 @@ export const nullValuesAsUndefined = <T>(obj: T): NullValuesAsUndefined<T> => {
   return Object.entries(obj).reduce(
     (result, [key, value]) => ({
       ...result,
-      [key]: nullAsUndefined(value)
+      [key]: nullAsUndefined(value),
     }),
     {} as NullValuesAsUndefined<T>
   );
